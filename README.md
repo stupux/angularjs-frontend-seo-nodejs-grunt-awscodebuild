@@ -1,5 +1,14 @@
-Welcome to the AWS CodeStar sample web application
+Welcome to Exosphere
 ==================================================
+
+## Build & development
+
+Run `grunt` for building and `grunt serve` for preview.
+
+## Testing
+
+Running `grunt test` will run the unit tests with karma.
+
 
 This sample code helps get you started with a simple Node.js web application
 deployed by AWS Elastic Beanstalk.
@@ -14,8 +23,8 @@ This sample includes:
   AWS Elastic Beanstalk will deploy your Express application
 * package.json - this file contains various metadata relevant to your Node.js
   application such as dependencies
-* server.js - this file contains the code for your application
-* public/ - this directory contains static web assets used by your application
+* app.js - this file contains the code for your application
+* app/ - this directory contains static web assets used by your application
 
 
 Getting Started
@@ -39,22 +48,14 @@ AWS CodeStar user guide.
 
 3. Start the development server:
 
-        $ node app.js
+        $ grunt serve
 
-4. Open http://127.0.0.1:3000/ in a web browser to view your application.
+4. Open the endpoint to view your application.
 
 What Do I Do Next?
 ------------------
 
-Once you have a virtual environment running, you can start making changes to
-the sample Node.js web application. We suggest making a small change to
-/public/index.html first, so you can see how changes pushed to
-your project's repository are automatically picked up and,deployed to the Amazon EC2
-instance by AWS Elastic Beanstalk. (You can watch the progress on your project dashboard.)
-Once you've seen how that works, start developing your own code, and have fun!
-
-Learn more about AWS CodeStar by reading the user guide.  Ask questions or make
-suggestions on our forum.
+Learn more about AWS CodeStar by reading the user guide. 
 
 User Guide: http://docs.aws.amazon.com/codestar/latest/userguide/welcome.html
 
