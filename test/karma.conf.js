@@ -35,6 +35,13 @@ module.exports = function(config) {
       'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
       'bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
       'bower_components/angular-seo/angular-seo.js',
+      'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/swiper/dist/js/swiper.js',
+      'bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js',
+      'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'bower_components/moment/moment.js',
+      'bower_components/humanize-duration/humanize-duration.js',
+      'bower_components/angular-timer/dist/angular-timer.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

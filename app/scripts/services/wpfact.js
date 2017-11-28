@@ -8,7 +8,7 @@
  * Factory in the angularWpApp.
  */
 angular.module('angularWpApp')
-  .factory('wpfact', function () {
+  .factory('wpfact', function() {
     // Service logic
     // ...
 
@@ -16,8 +16,8 @@ angular.module('angularWpApp')
 
     // Public API here
     return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
+        someMethod: function() {
+            return meaningOfLife;
+        }
     };
   });

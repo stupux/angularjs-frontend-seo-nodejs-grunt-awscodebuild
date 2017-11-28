@@ -1,0 +1,529 @@
+@import "vars"
+
+#sitecontainer > .content
+	padding-top: 80px
+
+// ELEMENTS
+.badge-rounded
+	position: relative
+
+	.badge-content
+		border-radius: 20px 60px 60px 20px
+		background: rgba( 0,0,0, .85 )
+		padding: 10px 30px
+		height: 60px
+		overflow: hidden
+		padding-right: 90px
+		color: $white-color
+
+	.badge-button
+		z-index: 10
+		cursor: pointer
+		position: absolute
+		right: 0px
+		top: 0px
+		width: 60px
+		height: 60px
+		transition: 400ms
+		-webkit-transition: 400ms
+
+		img
+			webkit-user-select: none !important
+			moz-user-select: none !important
+			user-select: none !important
+			width: 100%
+			
+		&:hover
+			-webkit-transform: scale(0.15)
+			transform: scale(1.15)
+
+.badge-rounded + .badge-rounded
+	margin-top: 30px
+
+.clock
+	float: left
+	display: inline-block
+	width: auto
+
+	.clock-item
+		display: inline-block
+		padding: 0 5px
+		position: relative
+
+		&:first-child
+			padding-left: 0px
+			padding-right: 5px
+
+		&:last-child
+			padding-right: 0px
+			padding-left: 5px
+
+		&:not(:last-child):before
+			content: ""
+			position: absolute
+			right: 0
+			top: 8px
+			width: 4px
+			height: 4px
+			background: $white-color
+			border-radius: 100%
+
+		&:not(:last-child):after
+			content: ""
+			position: absolute
+			right: 0
+			top: 16px
+			width: 4px
+			height: 4px
+			background: $white-color
+			border-radius: 100%
+
+		h2
+			padding-top: 5px
+			margin-bottom: 0px
+			font-size: 22px
+			line-height: 20px
+			text-align: center
+
+		p
+			font-size: 12px
+			line-height: 1
+			font-weight: 100
+			color: $white-color
+			text-align: center
+
+.list-centered
+	display: flex
+	display: -webkit-flex
+	align-items: center
+	-webkit-align-items: center
+	justify-content: center
+	-webkit-justify-content: center
+	flex-wrap: wrap
+	-webkit-flex-wrap: wrap
+	padding: 15px 45px
+	font-size: 14px
+
+	li
+		font-size: 14px
+		flex: 1 1 50%
+		list-style: none
+		position: relative
+		line-height: 1.4
+		margin-bottom: 10px
+		font-weight: 600
+
+		&:nth-child(1n)
+			text-align: right
+			padding-right: 15px
+
+			&:before
+				content: ""
+				position: absolute
+				width: 5px
+				height: 5px
+				right: 0px
+				top: 50%
+				bottom: 50%
+				background-color: $yellow-color
+				border-radius: 100%
+
+		&:nth-child(2n)
+			text-align: left
+			padding-left: 10px
+
+			&:before
+				content: none !important
+
+//CENTERED HEADER
+.centered-header
+	position: relative
+	min-height: calc(100vh - #{$headerHeight})
+	max-height: 2200px
+	display: flex
+	display: -webkit-flex
+	align-items: center
+	-webkit-align-items: center
+	justify-content: center
+	-webkit-justify-content: center
+	padding: 0 90px
+
+	.title
+		margin: auto
+		font-size: 4em
+		font-weight: 900
+		margin-bottom: 5px
+		text-align: justify
+		text-align-last: justify
+		width: 50vw
+
+		.underline-yellow
+			box-shadow: inset 0px -5px 0px 0px $yellow-color
+			border-bottom: none !important
+
+	.subtitle
+		margin-top: 5px
+		font-size: 0.35em
+		text-align: justify
+		text-align-last: justify
+		width: 100%
+
+	.btn-block
+		width: 90%
+		margin: auto
+
+//HOME HEADER
+.home-header
+	position: relative
+	min-height: calc(100vh + #{$headerHeight})
+	max-height: 2200px
+	display: flex
+	display: -webkit-flex
+	align-items: stretch
+	-webkit-align-items: stretch
+	justify-content: center
+	-webkit-justify-content: center
+
+	.title
+		font-size: 3em
+		letter-spacing: 1px
+		margin-bottom: 30px
+		text-align: justify
+		text-align-last: justify
+		width: 40vw
+
+		.underline-yellow
+			font-weight: 900
+			box-shadow: inset 0px -3px 0px 0px $yellow-color
+			border-bottom: none !important
+
+		&.just-title
+			font-size: 54px
+			text-align: left
+			text-align-last: left
+			letter-spacing: 1px
+			margin-bottom: 30px
+
+
+	.subtitle
+		margin-top: 5px
+		font-size: 15px
+		text-align: justify
+		text-align-last: justify
+		width: 100%
+
+		span
+			color: $yellow-color
+
+	.fixed-badges
+		position: absolute
+		right: 30px
+		bottom: 140px
+		z-index: 10
+
+	.swiper-buttons
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 140px
+		z-index: 10
+
+		& > .container
+			padding: 0px 60px
+
+		.btn.btn-inline
+			color: $white-color !important
+
+
+	.swiper-slide
+		padding-top: 60px
+
+		& > .container
+			padding: 0px 60px
+
+		.swiper-content
+			max-width: 1300px
+			margin: auto
+			display: block
+
+	.swiper-container
+		width: 100vw
+
+		.swiper-pagination
+			bottom: 150px
+			z-index: 1
+
+	@media (min-width: $lg)
+		height: 100vh
+
+		.title
+			font-size: 3.5em
+			width: 42vw
+
+		.subtitle
+			font-size: 0.25em
+
+	@media (min-width: $xl)
+		height: 100vh
+
+		.title
+			font-size: 4.5em
+
+		.subtitle
+			font-size: 0.3em
+
+	// h1
+	// 	font-size: 3.5em
+	// 	font-weight: 900
+	// 	margin-bottom: 5px
+
+	// 	.underline-yellow
+	// 		box-shadow: inset 0px -5px 0px 0px $yellow-color
+	// 		border-bottom: none !important
+
+	// h5
+	// 	margin-bottom: 30px
+	// 	text-transform: uppercase
+	// 	color: $white-color
+	// 	font-size: 20px
+	// 	vertical-align: text-top
+
+	// 	span
+	// 		color: $yellow-color
+
+.swiper-pagination
+	.swiper-pagination-bullet
+		background-color: $white-color
+
+.sub-home-header
+	width: 100%
+	min-height: 90px
+	position: absolute
+	background: rgba( 0,0,0, .85 )
+	bottom: 0px
+	z-index: 10
+	padding: 15px 0px
+	display: flex
+	display: -webkit-flex
+	align-items: center
+	-webkit-align-items: center
+	justify-content: center
+	-webkit-justify-content: center
+
+	.date-title
+		margin-bottom: 0px
+		font-size: 28px
+		font-weight: 800
+
+ul.list-styled
+	padding-left: 15px
+	list-style: none
+
+	li
+		line-height: 1.4
+		position: relative
+
+		&:before
+			content: ""
+			position: absolute
+			left: -15px
+			top: 13px
+			background-color: $yellow-color
+			border-radius: 100%
+			width: 5px
+			height: 5px
+
+.exosphere-block
+	background: $white-color url('../images/logo-quote.png') center/200px no-repeat
+	color: $black-light-color
+	padding: 120px 0px
+	text-align: center
+	font-size: 20px
+
+	p
+		font-weight: 600
+		line-height: 1.5
+		font-size: 20px
+
+.parallax-background
+	display: flex
+	display: -webkit-flex
+	align-items: center
+	-webkit-align-items: center
+	min-height: 100vh
+	max-height: 1920px
+	position: relative
+	overflow: hidden
+	border-bottom: 5px solid #ffffff
+
+	.content
+		margin: 90px 0 
+		widows: 100%
+		background: rgba( 0,0,0, 0.85 )
+		padding: 45px
+		color: $white-light-color
+
+		.underline
+			border-bottom-width: 1px !important
+			padding-bottom: 3px
+
+		h1
+			font-size: 28px
+			font-weight: 600
+
+			&.just-title
+				color: $yellow-color !important
+				position: relative
+				display: inline
+
+				&:after
+					border-bottom: 0px
+					position: absolute
+					left: 0
+					bottom: -3px
+					width: 100%
+					height: 2px
+					border-bottom: 1px solid $yellow-color
+					content: ""
+
+		h4
+			letter-spacing: 1px
+
+		p
+			margin-top: 45px
+
+		.list-styled
+			margin-top: 45px
+
+	& > img
+		position: absolute
+		top: 0
+		bottom: 0
+		height: 100%
+		width: auto
+		overflow: hidden
+		z-index: -1
+
+
+.swiper-contaier
+	width: 100%
+	height: 100%
+	background: #000000
+
+.swiper-slide
+	font-size: 18px
+	color: #ffffff
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	padding: 40px 60px
+
+.parallax-bg
+	position: absolute
+	left: 0
+	top: 0
+	width: 130%
+	height: 100%
+	-webkit-background-size: cover
+	background-size: cover
+	background-position: center
+
+.divisor-selector
+	height: 60px
+	display: flex
+	display: -webkit-flex
+	align-items: center
+	-webkit-align-items: center
+	justify-content: space-between
+	-webkit-justify-content: space-between
+
+	.content
+		flex: 1 1 auto
+		display: flex
+		display: -webkit-flex
+		align-items: center
+		-webkit-align-items: center
+		justify-content: space-between
+		-webkit-justify-content: space-between
+
+		.divisor
+			flex: 1 1 auto
+			height: 60px
+			padding: 5px 30px
+			border-right: 2px solid rgba( $white-color, .3)
+
+	.selector
+		flex: 0 0 auto
+		display: flex
+		display: -webkit-flex
+		flex-direction: column
+		-webkit-flex-direction: column
+		justify-content: center
+		-webkit-justify-content: center
+		border-right: 2px solid rgba( $white-color, .3)
+		height: 60px
+
+		.item
+			pointer-events: all
+			padding: 0px 60px 0px 50px
+			line-height: 1.5
+			display: flex
+			color: rgba( $white-color, .3)
+
+			&:hover
+				text-decoration: none
+				color: rgba( $white-color, .5)
+
+			&.item-actived
+				color: $white-color !important
+
+footer
+	background: url('../views/pages/home/img/m13.jpg') center/cover no-repeat
+		
+	.copyright
+		position: absolute
+		right: 60px
+		bottom: 60px
+		color: $white-light-color
+
+	.form-control
+		border-radius: 0 10px 10px 0px
+
+	.social-media-links a
+		padding: 0px 5px
+		display: inline-block
+
+.form-group-white
+	opacity: .8
+
+	.input-group
+		.input-group-addon
+			padding: 8px 30px
+			min-width: 180px
+			background: $white-color
+			color: $black-light-color
+			text-transform: uppercase
+			letter-spacing: 1px
+			font-weight: 600
+			font-size: 16px
+			border-radius: 10px 0 0 10px
+			border: none
+			border-right: 2px solid $black-color
+
+.btn-go-top
+	position: fixed !important
+	right: 60px  !important
+	bottom: 90px  !important
+	z-index: 100  !important
+	color: $white-light-color  !important
+	height: 50px  !important
+	width: 50px  !important
+	opacity: 0
+	background: url('../images/go-top.png') center/cover no-repeat !important
+	box-shadow: none !important
+
+	&.active
+		opacity: .8 !important
+
+		&:hover,
+		&:focus
+			opacity: 1 !important

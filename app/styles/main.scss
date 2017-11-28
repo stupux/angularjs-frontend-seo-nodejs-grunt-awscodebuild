@@ -20,21 +20,28 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-
-// bower:scss
-@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import "sass-space";
 
+@import "vars";
+@import "typography";
+@import "buttons";
+@import "theme";
 @import "navbar";
 @import "card";
 @import "animation";
 
 
-body{
-  font-family: Lora,'Times New Roman',serif;
-  font-size: 20px;
-  color: #404040;
-  padding-top:-20px;
+* {
+  font-family: 'stellar' !important;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
 }
 
 .navbar-border {
@@ -49,11 +56,14 @@ body{
   font-weight: 400;
 }
 
+.navbar-brand {
+  padding: 0px;
+}
+
 .navbar-brand,
 .navbar-nav li a {
-  line-height: 70px;
-  height: 70px;
-  padding-top: 0;
+  line-height: 1;
+  height: auto;
 }
 
 
@@ -116,28 +126,9 @@ body{
 
 .content
 {
-  padding-top: 20px;
-}
-
-h2,h1{
-  font-family: "Open Sans";
-  font-weight: bold;
-  margin-bottom:30px;
-}
-
-h2{
-  font-size: 1.3em;
-  margin-bottom: 20px;
-}
-
-p{
-  font-size: 1.0em;
-  line-height: 1.5em;
-
+  // padding-top: 20px;
 }
 
 .article-image{
   margin:30px;
 }
-
-

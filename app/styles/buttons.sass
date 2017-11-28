@@ -1,0 +1,56 @@
+@import "vars"
+
+// BUTTONS
+.btn-default
+	color: $white-color !important
+	background-color: $yellow-color !important
+	border: none !important
+	padding: 7px 25px !important
+	text-transform: uppercase
+	font-weight: 600
+	font-size: 18px
+	line-height: 1
+	border-radius: 10px
+
+	&:focus,
+	&:hover
+		color: $white-color !important
+		background-color: $yellow-dark-color !important
+
+	&.btn-inline
+		background: transparent !important
+		box-shadow: inset 0 0 0 2px $yellow-color !important
+		color: $black-color !important
+
+		&:focus,
+		&:hover
+			color: $black-color !important
+			background: $yellow-dark-color !important
+			box-shadow: inset 0 0 0 2px $yellow-dark-color !important
+
+.btn-white
+	color: $black-color !important
+	background-color: $white-light-color !important
+	border: none !important
+	padding: 7px 25px !important
+	text-transform: uppercase
+	font-weight: 600
+	font-size: 18px
+	line-height: 1
+	border-radius: 10px
+
+	&:focus,
+	&:hover
+		background-color: $grey-light-color !important
+		color: $yellow-color
+
+	&.btn-inline
+		background: transparent !important
+		box-shadow: inset 0 0 0 2px $white-color !important
+		color: $white-color !important
+
+		&:focus,
+		&:hover
+			color: $white-color !important
+			background: $yellow-color !important
+			box-shadow: inset 0 0 0 2px $yellow-color !important

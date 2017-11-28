@@ -1,0 +1,36 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-xs-12">
+			<div class="divisor-selector" ng-repeat="item in choose_city.items" ng-if="choose_city.selected == item.alias">
+
+				<div class="selector">
+					<a href="" ng-click="choose_city.change( item.alias )" ng-repeat="item in choose_city.items" class="item" ng-class="{'item-actived' : choose_city.selected == item.alias}">
+						{{item.name}}
+					</a>
+				</div>
+
+				<div class="content">
+					<div class="divisor" ng-repeat="city in item.items">
+						<h4 class="color-white uppercase">
+							{{city.name}}
+						</h4>
+						<p class="color-yellow">
+							{{city.date}}
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-md-4 col-xs-12">
+			<a href="">
+				<h2 class="text-right date-title color-white">
+					Join our 11 <small class="color-white" style="vertical-align: super; font-size: 14px; margin-left: -5px;">th</small> cohort
+				</h2>
+				<p class="color-yellow text-right">
+					CHOOSE YOUR CITY
+				</p>
+			</a>
+		</div>
+	</div>
+</div>

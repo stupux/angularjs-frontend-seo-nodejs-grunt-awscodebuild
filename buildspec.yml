@@ -1,0 +1,38 @@
+# 0.1 : shell for each command 
+# 0.2 : shell keeps its settings
+version: 0.2 
+
+phases:
+  install:
+    commands:
+      - echo INSTALL started on `date`
+      - printenv
+      - echo `pwd`
+      - npm install bower -g
+      - npm install grunt -g
+      - npm install
+      - echo INSTALL completed on `date`
+  pre_build:
+    commands:
+      - echo PRE_BUILD started on `date`
+      - echo `pwd`
+      - bower -v
+      - npm -v
+      - echo PRE_BUILD completed on `date`
+  build:
+    commands:
+      - echo BUILD started on `date`
+      - bower install --allow-root
+      - df -h .; du -sh -- * | sort -hr
+      - df -h .; du -sh -- * | sort -hr
+      - echo `pwd`
+      - grunt
+      - echo BUILD completed on `date`
+  post_build:
+    commands:      
+      - echo POST_BUILD started on `date`
+      - echo `pwd`
+      - echo POST_BUILD completed on `date`
+artifacts:
+  files:
+    - '**/*'

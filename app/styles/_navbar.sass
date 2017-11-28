@@ -1,61 +1,65 @@
-$bgDefault      : #fdfdfd
-$bgHighlight    : #ffffff
-$colDefault     : #717171
-$colHighlight   : #605858
-$dropDown       : true
+@import "vars"
+
+.navbar
+    box-shadow: none !important
+
 .navbar-default
-  background-color: $bgDefault
-  border-color: $bgHighlight
-  .navbar-brand
-    color: $colDefault
-    &:hover, &:focus
-      color: $colHighlight
-  .navbar-text
-    color: $colDefault
-  .navbar-nav
-    > li
-      > a
-        color: $colDefault
-        &:hover, &:focus
-          color: $colHighlight
-      @if $dropDown
-        > .dropdown-menu
-          background-color: $bgDefault
-          > li > a
-            color: $colDefault
-            &:hover, &:focus
-              color: $colHighlight
-              background-color: $bgHighlight
-          .divider
-            background-color: $bgHighlight
-    > .active
-      > a, > a:hover, > a:focus
-        color: $colHighlight
-        background-color: $bgHighlight
-    > .open
-      > a, > a:hover, > a:focus
-        color: $colHighlight
-        background-color: $bgHighlight
-  .navbar-toggle
-    border-color: $bgHighlight
-    &:hover, &:focus
-      background-color: $bgHighlight
-    .icon-bar
-      background-color: $colDefault
-  .navbar-collapse,
-  .navbar-form
-    border-color: $colDefault
-  .navbar-link
-    color: $colDefault
-    &:hover
-      color: $colHighlight
-@media (max-width: 767px)
-  .navbar-default .navbar-nav .open .dropdown-menu
-    > li > a
-      color: $colDefault
-      &:hover, &:focus
-        color: $colHighlight
-    > .active
-      > a, > a:hover, > a:focus
-        color: $colHighlight
-        background-color: $bgHighlight
+    background-color: $white-color
+    border-color: $white-color
+    height: $headerHeight
+    padding: 15px 0px
+
+    &.navbar-fixed
+        position: fixed
+        left: 0
+        right: 0
+        transition: translate3d(0,0,0) !important
+        -webkit-transition: translate3d(0,0,0) !important
+
+    .navbar-brand > img
+        max-height: 50px !important
+        margin-top: 0px !important
+
+    .navbar-nav
+        float: right
+        font-size: 18px
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+
+        li.active
+            a
+                color: $black-color
+                background-color: transparent !important
+
+                &:before
+                    content: ""
+                    height: 2px
+                    width: calc(100% - 50px)
+                    background-color: $black-color
+                    bottom: 20px
+                    left: 0
+                    right: 0
+                    position: absolute
+                    margin: auto
+
+        & > li > a
+            position: relative
+            color: $black-light-color
+            padding: 25px
+            letter-spacing: 1px
+            
+            @media (max-width: $md)
+                padding: 25px 0px
+
+            &:focus,
+            &:hover
+                background-color: transparent
+                color: $yellow-color
+
+        .btn-default
+            margin-left: 30px
+    
+    .btn
+        padding: 10px 15px !important

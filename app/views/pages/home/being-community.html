@@ -1,0 +1,53 @@
+<section class="parallax-background" 
+	ng-init="list=[
+		'Connect with top practitioners and experts in Blockchain, AI, and Synthetic Biology',
+		'Think more critically about the world, its systems, and your relationship to them',
+		'Improve your cross-cultural communication abilities & practice English in a safe environment',
+		'Identify hidden talents and discover new passions',
+		'Examine your inner motivations to better understand your own behavior',
+		'Change your context to more easily break old negative habits and create new positive habits',
+		'Kickstart a project you’ve been planning but haven’t yet begun',
+		'Expand your access to opportunities by forging diverse new relationships'
+	]">	
+	<div class="container-fluid xs-pt-125px xs-pb-125px">
+		<div class="row">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
+						<h2 class="color-yellow">
+							Benefits of being in our community
+						</h2>
+						<br>
+						<br>
+						<p>
+							Exosphere is more than a place of learning: it is a rapidly growing movement of people from around the
+							world who want lives of conscious action. People who embrace the challenges life presents with an
+							attitude of humility and problem-solving. People who desire a deeper understanding and compassion
+							for others. People who take responsibility for the stewardship of our natural world. People who believe
+							in the extraordinary potential of every individual, including themselves. Joining our community will
+							help you...
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="xs-p-0px col-xs-12 text-center">
+				<div class="xs-pt-60px xs-pb-30px">
+					<img src="images/positive.png" alt="" width="35px">
+					<ul class="list-centered">
+						<li ng-repeat="item in list" ng-bind-html="item"></li>
+					</ul>
+					<h4 class="xs-mt-30px xs-mb-30px">
+						<span class="join-our-community">
+							JOIN OUR COMMUNITY
+						</span>
+					</h4>
+				</div>
+				<a href="" class="btn btn-default btn-inline xs-mt-30px">
+					Apply now
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

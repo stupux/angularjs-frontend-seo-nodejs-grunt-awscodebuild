@@ -1,0 +1,200 @@
+<section id="home">
+	<div class="hero-header home-header">
+		<div class="swiper-container" id="swiper-home">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" ng-repeat="item in swiper.items" ng-init="$last ? swiper_home_init() : null">
+					<div class="container">
+						<div class="parallax-bg" style="background-image:url({{item.image}})" data-swiper-parallax="-5%"></div>
+						<div class="row">
+							<div class="xs-pb-60px xs-pt-60px col-md-6 col-xs-12">
+
+								<div class="title uppercase color-white" ng-if="item.title" data-swiper-parallax="-200" ng-class="{'just-title' : !item.subtitle}">
+									<span class="underline-yellow">
+										{{item.title}}
+									</span>
+									<h5 class="subtitle color-white uppercase" data-swiper-parallax="-250" ng-if="item.subtitle" ng-bind-html="item.subtitle"></h5>
+								</div>
+
+								<div class="text" data-swiper-parallax="-400">
+									<p ng-bind-html="item.text">
+			                        </p>
+			                        <br><br>
+			                        <ul class='list-styled' ng-if="item.list">
+			                            <li ng-repeat="item in item.list" ng-bind-html="item"></li>
+			                        </ul>
+								</div>
+
+								<!-- <h1 ng-if="item.title" data-swiper-parallax="-200">
+									<span class="underline-yellow color-white">
+										<b>
+											{{item.title}}
+										</b>
+									</span>
+								</h1>
+								<h5 data-swiper-parallax="-300" ng-if="item.subtitle" ng-bind-html="item.subtitle"></h5>
+								<div class="text" data-swiper-parallax="-400">
+									<p ng-bind-html="item.text">
+			                        </p>
+			                        <br><br>
+			                        <ul class='list-styled' ng-if="item.list">
+			                            <li ng-repeat="item in item.list" ng-bind-html="item"></li>
+			                        </ul>
+								</div> -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-buttons">
+				<div class="container">
+					<a href="" ng-click="applynow()" class="btn btn-white">
+						Apply now
+					</a>
+					<a href="" ng-click="learnmore()" class="btn btn-default btn-inline color-white" style="margin-left: 30px;">
+						Learn more
+					</a>
+				</div>
+			</div>
+			<div class="swiper-pagination swiper-pagination-white"></div>
+		</div>
+
+		<div class="fixed-badges">
+			<div class="badge-rounded">
+				<div class="badge-content">
+					<timer end-time="endTime">
+						<div class="clock">
+							<div class="clock-item">
+								<h2 class="color-white">
+									{{days | digits}}
+								</h2>
+								<p>
+									days
+								</p>
+							</div>
+							<div class="clock-item">
+								<h2 class="color-white">
+									{{hours | digits}}
+								</h2>
+								<p>
+									hours
+								</p>
+							</div>
+							<div class="clock-item">
+								<h2 class="color-white">
+									{{minutes | digits}}
+								</h2>
+								<p>
+									min
+								</p>
+							</div>
+						</div>
+					</timer>
+					<p class="text-right" style="font-size: 14px;">
+						Buy your spot
+						<span class="color-yellow">before December 15 2017</span>
+						<br>
+						for the early bird benefits package
+					</p>
+				</div>
+				<a ng-click="applynow()" class="badge-button">
+					<img src="images/early-apply.png" alt="">
+				</a>
+			</div>
+			<div class="badge-rounded">
+				<div class="badge-content">
+					<h4 class="color-white" style="margin-top: 10px;">
+						Share with your friends and join the community
+					</h4>
+				</div>
+				<a ng-click="share()" class="badge-button">
+					<img src="images/share.png" alt="">
+				</a>
+			</div>
+		</div>
+
+		<div class="sub-home-header" ng-include="'views/pages/home/choose-city.html'">
+		</div>
+	</div>
+</section>
+
+<button class="btn btn-go-top" ng-click="goTop()" ng-class="{'active' : pixelsScrolled > 1920}"></button>
+
+<div id="learnmore" ng-repeat="item in sections" ng-switch="item.type">
+
+	<section class="exosphere-block" ng-switch-when="quote">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 col-xs-12">
+					<p ng-class="{'quote-text' : item.quote}">
+						{{item.title}}
+					</p>
+					<p class="color-yellow">
+						{{item.subtitle}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+			
+	<section class="parallax-background" ng-switch-when="parallax" style="background: url({{item.image}}) center/cover no-repeat;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 col-xs-12">
+					<div class="row">
+						<div class="col-md-6 col-xs-12" ng-class="{'float-right' : item.side == 'right'}">
+							<div class="content">
+								<h1 class="color-white" ng-class="{'just-title' : !item.subtitle}" ng-bind-html="item.title"></h1>
+								<h4 class="color-yellow uppercase">
+									<span class="underline" ng-bind-html="item.subtitle"></span>
+								</h4>
+								<div class="text">
+									<p ng-bind-html="item.text"></p>
+			                        <ul class='list-styled' ng-if="item.list">
+			                            <li ng-repeat="item in item.list" ng-bind-html="item"></li>
+			                        </ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="xs-pt-90px xs-pb-90px parallax-background" ng-switch-when="infrograph" style="background: url({{item.image}}) center/cover no-repeat;">
+		<!-- <img ng-if="item.image" ng-src="{{item.image}}" alt="" width="100%" class="parallax-image"> -->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-xs-12">
+					<div class="panel xs-p-60px">
+						<div class="row">
+							<div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-xs-12">
+								<h2 class="color-black uppercase text-center" ng-if="item.title" ng-bind-html='item.title'></h2>
+								<h4 class="text-center color-yellow uppercase" ng-if="item.subtitle" ng-bind-html='item.subtitle'></h4>
+								<p class="text-center color-black-light xs-mt-50px xs-mb-60px" ng-if="item.text" ng-bind-html='item.text'></p>
+							</div>
+						</div>
+						<img ng-if="item.infograph" ng-src="{{item.infograph}}" alt="" width="100%">
+						<div class="row" ng-if="item.button">
+							<div class="col-xs-12">
+								<center>
+									<a ng-href="{{item.button.href}}" class="btn btn-default text-center xs-mt-60px xs-mb-30px">
+										{{item.button.title}}
+									</a>
+								</center>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div ng-switch-when="include">
+		<ng-include src="item.src"></ng-include>
+	</div>
+
+</div>
+
+<footer ng-include="'includes/footer.html'"></footer>

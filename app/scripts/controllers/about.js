@@ -1,17 +1,6 @@
-'use strict';
-
-/**
- * @ngdoc function
- * @name angularWpApp.controller:AboutCtrl
- * @description
- * # AboutCtrl
- * Controller of the angularWpApp
- */
 angular.module('angularWpApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('AboutCtrl', function ($scope, $rootScope, $routeParams, $route, wp ) {
+
+        console.log("AboutCtrl");
+
+    })

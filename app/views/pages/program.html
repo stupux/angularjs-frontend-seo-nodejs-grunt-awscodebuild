@@ -1,0 +1,115 @@
+<section>
+	<div class="hero-header centered-header" style="background: url('views/pages/program/img/m1.jpg') center/cover no-repeat;">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<div class="title uppercase color-white">
+						<span class="underline-yellow">
+							<b>
+								International program
+							</b>
+						</span>
+						<h5 class="subtitle color-white uppercase">
+							Learn <span class="color-yellow">more about what is included in the 6-week program</span>
+						</h5>
+					</div>
+				</div>
+				<div class="col-xs-12 xs-mt-60px text-center">
+					<div class="row">
+						<div class="col-md-2 col-md-offset-5 col-xs-12">
+							<a href="" class="btn btn-white btn-block btn-inline">
+								Curriculum
+							</a>
+						</div>
+						<div class="col-md-2 col-md-offset-5 col-xs-12 xs-mt-20px">
+							<a href="" class="btn btn-white btn-block btn-inline">
+								Streams
+							</a>
+						</div>
+						<div class="col-md-2 col-md-offset-5 col-xs-12 xs-mt-20px">
+							<a href="" class="btn btn-white btn-block btn-inline">
+								Projects
+							</a>
+						</div>
+						<div class="col-md-2 col-md-offset-5 col-xs-12 xs-mt-60px">
+							<a href="" class="btn btn-block btn-white">
+								Apply now
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div ng-repeat="item in sections" ng-switch="item.type">
+
+	<section class="exosphere-block" ng-switch-when="quote">
+		<div class="container">
+			<p>
+				{{item.title}}
+			</p>
+			<p class="color-yellow">
+				{{item.subtitle}}
+			</p>
+		</div>
+	</section>
+			
+	<section class="parallax-background" ng-switch-when="parallax">
+		<img ng-if="item.image" ng-src="{{item.image}}" alt="" width="100%" class="parallax-image">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 col-xs-12" ng-class="{'float-right' : item.side == 'right'}">
+					<div class="content">
+						<h1 class="color-white">
+							{{item.title}}
+						</h1>
+						<h4 class="color-yellow uppercase">
+							<span class="underline">
+								{{item.subtitle}}
+							</span>
+						</h4>
+						<div ng-bind-html="item.text"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="xs-pt-90px xs-pb-90px parallax-background" ng-switch-when="infrograph">
+		<img ng-if="item.image" ng-src="{{item.image}}" alt="" width="100%" class="parallax-image">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-xs-12">
+					<div class="panel xs-p-60px">
+						<div class="row">
+							<div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-xs-12">
+								<h2 class="color-black uppercase text-center" ng-if="item.title" ng-bind-html='item.title'></h2>
+								<h4 class="text-center color-yellow uppercase" ng-if="item.subtitle" ng-bind-html='item.subtitle'></h4>
+								<p class="text-center color-black-light xs-mt-50px xs-mb-60px" ng-if="item.text" ng-bind-html='item.text'></p>
+							</div>
+						</div>
+						<img ng-if="item.infograph" ng-src="{{item.infograph}}" alt="" width="100%">
+						<div class="row" ng-if="item.button">
+							<div class="col-xs-12">
+								<center>
+									<a ng-href="{{item.button.href}}" class="btn btn-default text-center xs-mt-60px xs-mb-30px">
+										{{item.button.title}}
+									</a>
+								</center>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div ng-switch-when="include">
+		<ng-include src="item.src"></ng-include>
+	</div>
+
+</div>
+
+<footer ng-include="'includes/footer.html'"></footer>

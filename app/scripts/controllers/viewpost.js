@@ -9,7 +9,7 @@
  */
 
 
-var API_URL = 'http://angular.codetutorial.io:3000'
+var API_URL = 'http://exosphe.re/api'
 
 angular.module('angularWpApp')
   .controller('ViewpostCtrl', function ($scope,$routeParams,wp  ) {
