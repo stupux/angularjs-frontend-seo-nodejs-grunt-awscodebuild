@@ -9,6 +9,39 @@
     height: $headerHeight
     padding: 15px 0px
 
+    .navbar-header
+
+        @media (max-width: $sm)
+            display: flex
+            display: -webkit-flex
+            align-items: center
+            -webkit-align-items: center
+            justify-content: center
+            -webkit-justify-content: center
+            padding: 0px 15px !important
+
+            .navbar-brand
+                flex: 1 1 auto
+                display: flex
+                display: -webkit-flex
+                align-items: center
+                -webkit-align-items: center
+                justify-content: center
+                -webkit-justify-content: center
+
+                img
+                    margin: auto !important
+
+        .navbar-toggle
+            float: left
+            margin: 0px
+            padding: 0px
+            border: none
+            max-width: 30px
+
+            img
+                width: 100%
+
     &.navbar-fixed
         position: fixed
         left: 0

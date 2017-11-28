@@ -1,10 +1,16 @@
 <div class="container" ng-controller="NavbarCtrl">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <img src="images/menu-mobile.png" alt="">
         </button>
-        <a class="navbar-brand" rel="home" href="/#!/main/all" >
-        <img style="max-height:60px; margin-top:5px"
-            src="images/logo.png">
+        <a class="navbar-brand hidden-xs hidden-sm" rel="home" href="/#!/main/all" >
+            <img src="images/logo.png" style="max-height:60px; margin-top:5px" >
+        </a>
+        <a class="navbar-brand visible-xs visible-sm" rel="home" href="/#!/main/all" >
+            <img src="images/logo-mobile.png" style="max-height:60px; margin-top:5px" >
+        </a>
+        <a href="" ng-click="applynow()" class="btn btn-default visible-xs visible-sm">
+            Apply
         </a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
@@ -12,24 +18,6 @@
             <li ng-repeat="item in navbar" ng-class="{'active' : route.current.$$route.controllerAs == item.alias }">
                 <a ng-href="{{item.link}}" role="button">{{item.name}}</a>
             </li>
-            <!-- <li>
-                <a href="" role="button">Program</a>
-            </li>
-            <li>
-                <a href="" role="button">Cities</a>
-            </li>
-            <li>
-                <a href="" role="button">Community</a>
-            </li>
-            <li>
-                <a href="" role="button">About</a>
-            </li>
-            <li>
-                <a href="" role="button">News</a>
-            </li>
-            <li>
-                <a href="" role="button">FAQ</a>
-            </li> -->
             <li>
                 <a href="" ng-click="applynow()" class="btn btn-default">
                     Apply now
@@ -38,16 +26,3 @@
         </ul>
     </div>
 </div>
-
-<script type="text/ng-template" id="myModalContent.html">
-   <div class="modal-header">
-       <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
-   </div>
-   <div class="modal-body" id="modal-body">
-       <ul>
-       </ul>
-   </div>
-   <div class="modal-footer">
-       <button class="btn btn-warning" type="button" ng-click="closeapply">Cancel</button>
-   </div>
-</script>

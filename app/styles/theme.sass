@@ -204,6 +204,12 @@
 			letter-spacing: 1px
 			margin-bottom: 30px
 
+		@media (max-width: $sm)
+			font-size: 2.5em
+			text-align: center
+			text-align-last: center
+			width: 100%
+			box-shadow: none !important
 
 	.subtitle
 		margin-top: 5px
@@ -240,6 +246,9 @@
 
 		& > .container
 			padding: 0px 60px
+
+			@media (max-width: $sm)
+				padding: 0px 30px
 
 		.swiper-content
 			max-width: 1300px
@@ -416,6 +425,10 @@ ul.list-styled
 	-webkit-box-sizing: border-box
 	box-sizing: border-box
 	padding: 40px 60px
+
+	@media (max-width: $sm)
+		padding: 0px !important
+
 
 .parallax-bg
 	position: absolute
