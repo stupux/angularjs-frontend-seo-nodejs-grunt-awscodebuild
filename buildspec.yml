@@ -20,6 +20,7 @@ phases:
       - echo `pwd`
       - bower -v
       - npm -v
+      - grunt --force
       - echo PRE_BUILD completed on `date`
   build:
     commands:
