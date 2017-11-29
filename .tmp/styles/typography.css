@@ -1,0 +1,125 @@
+/* line 5, ../../app/styles/typography.sass */
+.quote-text:before, .quote-text:after {
+  content: '"';
+}
+
+/* line 10, ../../app/styles/typography.sass */
+b, strong {
+  font-weight: 600;
+}
+
+/* line 13, ../../app/styles/typography.sass */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 16, ../../app/styles/typography.sass */
+.underline {
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid;
+}
+
+/* line 21, ../../app/styles/typography.sass */
+.underline-yellow {
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid #dcad29;
+}
+
+/* line 26, ../../app/styles/typography.sass */
+a:hover,
+a:focus {
+  color: #dcad29;
+  text-decoration: none;
+}
+
+/* line 31, ../../app/styles/typography.sass */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* line 36, ../../app/styles/typography.sass */
+h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #191919;
+  font-size: 34px;
+  margin-bottom: 0px;
+}
+
+/* line 43, ../../app/styles/typography.sass */
+h2 {
+  text-transform: uppercase;
+  color: #191919;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+
+/* line 50, ../../app/styles/typography.sass */
+h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 0px;
+  color: #191919;
+}
+
+/* line 57, ../../app/styles/typography.sass */
+h4 {
+  color: #191919;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+/* line 63, ../../app/styles/typography.sass */
+h5 {
+  color: #191919;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+/* line 69, ../../app/styles/typography.sass */
+.color-black {
+  color: #191919 !important;
+}
+
+/* line 72, ../../app/styles/typography.sass */
+.color-black-light {
+  color: #323232 !important;
+}
+
+/* line 75, ../../app/styles/typography.sass */
+.color-white {
+  color: #fafafa !important;
+}
+
+/* line 78, ../../app/styles/typography.sass */
+.color-white-light {
+  color: #fafafa !important;
+}
+
+/* line 81, ../../app/styles/typography.sass */
+.color-yellow {
+  color: #dcad29 !important;
+}
+
+/* line 84, ../../app/styles/typography.sass */
+.color-yellow-dark {
+  color: #C89E26 !important;
+}
+
+/* line 87, ../../app/styles/typography.sass */
+.join-our-community {
+  color: #191919 !important;
+  padding: 5px 0px;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 2px solid #dcad29;
+  border-top: 2px solid #dcad29;
+}
