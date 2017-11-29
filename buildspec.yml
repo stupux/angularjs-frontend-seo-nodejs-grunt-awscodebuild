@@ -11,7 +11,7 @@ phases:
       - npm config set unsafe-perm=true
       - npm install bower -g
       - npm install grunt -g
-      - sudo npm install
+      - sudo npm install --force
       - bower install --allow-root
       - echo INSTALL completed on `date`
   pre_build:
