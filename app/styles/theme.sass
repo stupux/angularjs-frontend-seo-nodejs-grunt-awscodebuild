@@ -204,13 +204,6 @@
 			letter-spacing: 1px
 			margin-bottom: 30px
 
-		@media (max-width: $sm)
-			font-size: 2.5em
-			text-align: center
-			text-align-last: center
-			width: 100%
-			box-shadow: none !important
-
 	.subtitle
 		margin-top: 5px
 		font-size: 15px
@@ -220,7 +213,7 @@
 
 		span
 			color: $yellow-color
-
+	
 	.fixed-badges
 		position: absolute
 		right: 30px
@@ -281,6 +274,62 @@
 		.subtitle
 			font-size: 0.3em
 
+	&.mobile-header
+		min-height: auto
+		height: auto
+		background: url('../views/pages/home/img/m1-1.jpg')
+		padding-bottom: 90px
+
+		.title
+			font-size: 3em
+			font-weight: 800
+			text-align: center
+			text-align-last: center
+			width: 100%
+			margin: 60px 0 0
+			line-height: 1.2
+
+			.underline-yellow
+				box-shadow: none !important
+
+		.subtitle
+			text-align: center
+			text-align-last: center
+			font-size: 18px
+			line-height: 1.4
+			font-weight: 600
+			padding: 0 45px
+			margin-top: 25px
+
+		.clock
+			width: 100%
+			margin-bottom: 15px
+
+		.sub-mobile-header
+			width: 100vw
+			overflow-y: hidden
+			overflow-x: auto
+			height: 80px
+			display: flex
+			display: -webkit-flex
+			flex-wrap: nowrap
+			-webkit-flex-wrap: nowrap
+			background: rgba(0,0,0,.85)
+			position: absolute
+			bottom: 0px
+
+			.divisor-selector
+				float: left
+				flex: 0 0 auto
+				height: 100%
+
+				.divisor
+					padding: 0px 30px
+					border-right: 2px solid rgba( $white-color, .3)
+
+					&:last-child
+						border-right: none !important
+	
 	// h1
 	// 	font-size: 3.5em
 	// 	font-weight: 900
@@ -360,10 +409,15 @@ ul.list-styled
 	align-items: center
 	-webkit-align-items: center
 	min-height: 100vh
-	max-height: 1920px
 	position: relative
 	overflow: hidden
 	border-bottom: 5px solid #ffffff
+
+	@media (max-width: $xs)
+		min-height: auto
+
+		&[ng-switch-when="infrograph"]
+			background: $white-color !important
 
 	.content
 		margin: 90px 0 
@@ -375,6 +429,9 @@ ul.list-styled
 		.underline
 			border-bottom-width: 1px !important
 			padding-bottom: 3px
+
+			@media (max-width: $sm)
+				line-height: 1.8
 
 		h1
 			font-size: 28px
@@ -498,6 +555,12 @@ footer
 		bottom: 60px
 		color: $white-light-color
 
+		@media (max-width: $sm)
+			right: 0 !important
+			left: 0 !important
+			margin: auto !important
+			text-align: center !important
+
 	.form-control
 		border-radius: 0 10px 10px 0px
 
@@ -524,15 +587,19 @@ footer
 
 .btn-go-top
 	position: fixed !important
-	right: 60px  !important
-	bottom: 90px  !important
-	z-index: 100  !important
+	right: 60px !important
+	bottom: 90px !important
+	z-index: 100 !important
 	color: $white-light-color  !important
-	height: 50px  !important
-	width: 50px  !important
+	height: 50px !important
+	width: 50px !important
 	opacity: 0
 	background: url('../images/go-top.png') center/cover no-repeat !important
 	box-shadow: none !important
+
+	@media (max-width: $sm)
+		right: 30px !important
+		bottom: 30px !important
 
 	&.active
 		opacity: .8 !important
@@ -540,3 +607,9 @@ footer
 		&:hover,
 		&:focus
 			opacity: 1 !important
+
+.panel-black
+	background: rgba(0,0,0,.85)
+	border: none
+	border-radius: 10px
+	margin: 0px

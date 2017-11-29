@@ -11,6 +11,7 @@ phases:
       - npm install bower -g
       - npm install grunt -g
       - npm install
+      - bower install --allow-root
       - echo INSTALL completed on `date`
   pre_build:
     commands:
@@ -22,8 +23,6 @@ phases:
   build:
     commands:
       - echo BUILD started on `date`
-      - bower install --allow-root
-      - df -h .; du -sh -- * | sort -hr
       - df -h .; du -sh -- * | sort -hr
       - echo `pwd`
       - grunt

@@ -1,5 +1,5 @@
 <section id="home">
-	<div class="hero-header home-header">
+	<div class="hero-header home-header hidden-xs hidden-sm">
 		<div class="swiper-container" id="swiper-home">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide" ng-repeat="item in swiper.items" ng-init="$last ? swiper_home_init() : null">
@@ -116,6 +116,80 @@
 		<div class="sub-home-header" ng-include="'views/pages/home/choose-city.html'">
 		</div>
 	</div>
+	<div class="mobile-header home-header visible-xs visible-sm">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					<h1 class="title color-white">
+						Disturb the universe
+					</h1>
+					<p class="uppercase subtitle color-yellow">
+						Join our 11th
+						<br>
+						6-week program
+						<br>
+						in 1 of 6 countries
+					</p>
+				</div>
+				<div class="xs-mt-30px col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 text-center">
+					<div class="panel panel-black text-center">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-12">
+									<timer end-time="endTime">
+										<div class="clock">
+											<div class="clock-item">
+												<h2 class="color-white">
+													{{days | digits}}
+												</h2>
+												<p>
+													days
+												</p>
+											</div>
+											<div class="clock-item">
+												<h2 class="color-white">
+													{{hours | digits}}
+												</h2>
+												<p>
+													hours
+												</p>
+											</div>
+											<div class="clock-item">
+												<h2 class="color-white">
+													{{minutes | digits}}
+												</h2>
+												<p>
+													min
+												</p>
+											</div>
+										</div>
+									</timer>
+								</div>
+								<div class="col-xs-12">
+									<p class="color-white">
+										Buy your spot <b class="color-yellow">before January 15 2018</b> for the early bird benefits package
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="" ng-click="applynow()" class="btn btn-white xs-mt-45px xs-mb-45px">Apply now</a>
+				</div>
+			</div>
+		</div>
+		<div class="sub-mobile-header">
+			<div class="divisor-selector" ng-repeat="item in choose_city.items">
+				<div class="divisor" ng-repeat="city in item.items">
+					<h4 class="color-white">
+						{{city.name}}
+					</h4>
+					<p class="color-yellow">
+						{{city.date}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 <button class="btn btn-go-top" ng-click="goTop()" ng-class="{'active' : pixelsScrolled > 1920}"></button>
@@ -125,7 +199,7 @@
 	<section class="exosphere-block" ng-switch-when="quote">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2 col-xs-12">
+				<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
 					<p ng-class="{'quote-text' : item.quote}">
 						{{item.title}}
 					</p>
@@ -162,14 +236,14 @@
 		</div>
 	</section>
 
-	<section class="xs-pt-90px xs-pb-90px parallax-background" ng-switch-when="infrograph" style="background: url({{item.image}}) center/cover no-repeat;">
+	<section class="xs-pt-0px xs-pb-0px md-pt-90px md-pb-90px parallax-background" ng-switch-when="infrograph" style="background: url({{item.image}}) center/cover no-repeat;">
 		<!-- <img ng-if="item.image" ng-src="{{item.image}}" alt="" width="100%" class="parallax-image"> -->
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-xs-12">
-					<div class="panel xs-p-60px">
+					<div class="panel md-p-60px xs-p-0px xs-pt-30px xs-pb-30px">
 						<div class="row">
-							<div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-xs-12">
+							<div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
 								<h2 class="color-black uppercase text-center" ng-if="item.title" ng-bind-html='item.title'></h2>
 								<h4 class="text-center color-yellow uppercase" ng-if="item.subtitle" ng-bind-html='item.subtitle'></h4>
 								<p class="text-center color-black-light xs-mt-50px xs-mb-60px" ng-if="item.text" ng-bind-html='item.text'></p>

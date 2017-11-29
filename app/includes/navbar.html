@@ -3,21 +3,21 @@
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <img src="images/menu-mobile.png" alt="">
         </button>
-        <a class="navbar-brand hidden-xs hidden-sm" rel="home" href="/#!/main/all" >
+        <a class="navbar-brand hidden-xs" rel="home" href="/#!/main/all" >
             <img src="images/logo.png" style="max-height:60px; margin-top:5px" >
         </a>
-        <a class="navbar-brand visible-xs visible-sm" rel="home" href="/#!/main/all" >
+        <a class="navbar-brand visible-xs" rel="home" href="/#!/main/all" >
             <img src="images/logo-mobile.png" style="max-height:60px; margin-top:5px" >
         </a>
-        <a href="" ng-click="applynow()" class="btn btn-default visible-xs visible-sm">
+        <a href="" ng-click="applynow()" class="btn btn-default visible-xs">
             Apply
         </a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li ng-repeat="item in navbar" ng-class="{'active' : route.current.$$route.controllerAs == item.alias }">
+            <!-- <li ng-repeat="item in navbar" ng-class="{'active' : route.current.$$route.controllerAs == item.alias }">
                 <a ng-href="{{item.link}}" role="button">{{item.name}}</a>
-            </li>
+            </li> -->
             <li>
                 <a href="" ng-click="applynow()" class="btn btn-default">
                     Apply now
