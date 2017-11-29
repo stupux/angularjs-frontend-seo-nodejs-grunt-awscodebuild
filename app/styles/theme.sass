@@ -188,8 +188,7 @@
 		font-size: 3em
 		letter-spacing: 1px
 		margin-bottom: 30px
-		text-align: justify
-		text-align-last: justify
+		text-align: left
 		width: 40vw
 
 		.underline-yellow
@@ -207,8 +206,7 @@
 	.subtitle
 		margin-top: 5px
 		font-size: 15px
-		text-align: justify
-		text-align-last: justify
+		text-align: left
 		width: 100%
 
 		span
@@ -277,7 +275,7 @@
 	&.mobile-header
 		min-height: auto
 		height: auto
-		background: url('../views/pages/home/img/m1-1.jpg')
+		background: url('https://s3.amazonaws.com/exosphere/home/img/m1-1.jpg')
 		padding-bottom: 90px
 
 		.title
@@ -380,6 +378,7 @@ ul.list-styled
 	li
 		line-height: 1.4
 		position: relative
+		margin-bottom: 10px
 
 		&:before
 			content: ""
@@ -547,7 +546,7 @@ ul.list-styled
 				color: $white-color !important
 
 footer
-	background: url('../views/pages/home/img/m13.jpg') center/cover no-repeat
+	background: url('https://s3.amazonaws.com/exosphere/home/img/m13.jpg') center/cover no-repeat
 		
 	.copyright
 		position: absolute
@@ -570,8 +569,36 @@ footer
 
 .form-group-white
 	opacity: .8
+	width: 100%
 
 	.input-group
+		width: 100%
+
+		&.input-required
+			box-shadow: 0 0 0 2px $yellow-color
+			border-radius: 10px
+
+			&:after
+				content: "Please enter a valid email address"
+				position: absolute
+				left: calc(100% + 15px)
+				left: -webkit-calc(100% + 15px)
+				top: 8px
+				color: $yellow-color
+				width: 100%
+				text-align: left
+
+			@media (max-width: $sm)
+				margin-bottom: 45px
+					
+				&:after
+					left: 0px
+					right: 0px
+					bottom: -30px
+					top: auto
+					text-align: center	
+					
+
 		.input-group-addon
 			padding: 8px 30px
 			min-width: 180px
@@ -584,6 +611,9 @@ footer
 			border-radius: 10px 0 0 10px
 			border: none
 			border-right: 2px solid $black-color
+
+		.form-control
+			width: 100%
 
 .btn-go-top
 	position: fixed !important

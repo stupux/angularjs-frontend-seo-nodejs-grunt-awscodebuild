@@ -3,7 +3,9 @@ angular.module('angularWpApp').controller('NavbarCtrl', function($scope, wp, $ro
     $scope.route = $route;
     console.log($scope.route);
 
-    $scope.applynow = function (size, parentSelector) {
+    $scope.applynow = {}
+
+    $scope.applynow.open = function (size, parentSelector) {
 
         var parentElem = parentSelector ? 
             angular.element($document[0].querySelector('.modal-demo ' + parentSelector)) : undefined;
@@ -17,6 +19,7 @@ angular.module('angularWpApp').controller('NavbarCtrl', function($scope, wp, $ro
             size: size,
             appendTo: parentElem
         });
+
     }
 
 	$scope.navbar = [

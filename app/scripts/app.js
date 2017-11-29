@@ -20,7 +20,8 @@ angular
         'hljs',
         'seo',
         'timer',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'mailchimp'
     ])
     .config(function(hljsServiceProvider) {
         hljsServiceProvider.setOptions({

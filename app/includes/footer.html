@@ -18,7 +18,97 @@
 				<p>
 					Subscribe to receive actionable strategies and tools to start improving your life.
 				</p>
-				<form action="" class="md-p-60px xs-p-30px" ng-init="subscribe">
+
+				<div ng-controller="MailchimpSubscriptionCtrl" class="lg-p-60px md-p-45px xs-p-30px">
+		              
+					<form name="MailchimpSubscriptionForm"  class="form-inline" role="form" ng-hide="mailchimp.result === 'success'">
+		          		<input class="hidden" type="hidden" ng-model="mailchimp.username" ng-init="mailchimp.username='exosphe'">
+		          		<input class="hidden" type="hidden" ng-model="mailchimp.dc" ng-init="mailchimp.dc='us8'">
+		          		<input class="hidden" type="hidden" ng-model="mailchimp.u" ng-init="mailchimp.u='43214b7d8d4adad3c1ba66780'">
+		          		<input class="hidden" type="hidden" ng-model="mailchimp.id" ng-init="mailchimp.id='17085a43ff'">
+
+						<!-- <div class="form-group">
+						    <label class="sr-only" for="exampleInputEmail2">Email address</label>
+						    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email" ng-model="mailchimp.email">
+						</div>
+
+						<button type="submit" class="btn btn-info" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)" type="submit" value="SIGN UP" disabled="disabled">Submit</button>
+
+	          			<div ng-show="mailchimp.result === 'error'">
+	            			<p ng-bind-html="mailchimp.errorMessage" class="error"></p>
+          				</div> -->
+
+          				<div class="form-group form-group-white xs-mb-30px">
+          					<div class="input-group input-required">
+      							<span class="input-group-addon">
+          							Email address
+      							</span>
+          						<input type="email" name="subscribe-email" ng-model="subscribe.email" class="form-control">
+          					</div>	
+          				</div>
+          				<div class="form-group form-group-white xs-mt-15px">
+          					<div class="input-group">
+      							<span class="input-group-addon">
+          							First name
+      							</span>
+          						<input type="text" name="subscribe-first-name" ng-model="subscribe.name" class="form-control">
+          					</div>
+          				</div>
+          				<div class="form-group xs-mt-30px">
+          					<center>
+          						<button type="submit" class="btn btn-default text-center" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)" type="submit" value="SIGN UP" disabled="disabled">
+          							Subscribe
+      							</button>
+          					</center>
+          				</div>
+	          			<div ng-show="mailchimp.result === 'error'">
+	            			<p ng-bind-html="mailchimp.errorMessage" class="error"></p>
+          				</div>
+					</form>     
+
+					<!-- <div ng-hide="mailchimp.result === 'success'">
+						<input class="hidden" type="hidden" ng-model="mailchimp.username" ng-init="mailchimp.username='exosphe'">
+						<input class="hidden" type="hidden" ng-model="mailchimp.dc" ng-init="mailchimp.dc='us8'">
+						<input class="hidden" type="hidden" ng-model="mailchimp.u" ng-init="mailchimp.u='43214b7d8d4adad3c1ba66780'">
+						<input class="hidden" type="hidden" ng-model="mailchimp.id" ng-init="mailchimp.id='17085a43ff'">
+						<div class="form-group form-group-white">
+							<div class="input-group">
+									<span class="input-group-addon">
+									Email address
+									</span>
+								<input type="email" name="email" ng-model="mailchimp.EMAIL" placeholder="Email address" ng-required class="form-control">
+							</div>	
+						</div>
+						<div class="form-group form-group-white xs-mt-15px">
+							<div class="input-group">
+									<span class="input-group-addon">
+									First name
+									</span>
+								<input type="text" name="fname" ng-model="mailchimp.FNAME" placeholder="First name" class="form-control">
+							</div>
+						</div>
+						<div class="form-group xs-mt-30px">
+							<center>
+								<a href="" class="btn btn-default text-center" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)">
+									Subscribe
+								</a>
+							</center>
+						</div>
+					</div> -->
+
+					<!-- Show error message if MailChimp unsuccessfully added the email to the list. -->
+					<!-- <div ng-show="mailchimp.result === 'error'" ng-cloak>
+						<span ng-bind-html="mailchimp.errorMessage"></span>
+					</div> -->
+
+					<!-- Show success message if MailChimp returned successfully. -->
+					<!-- <div ng-show="mailchimp.result === 'success'" ng-cloak>
+						<span ng-bind-html="mailchimp.successMessage"></span>
+					</div> -->
+
+				</div>
+
+				<!-- <form action="" class="md-p-60px xs-p-30px" ng-init="subscribe">
 					<div class="form-group form-group-white xs-mb-30px">
 						<div class="input-group">
 								<span class="input-group-addon">
@@ -42,7 +132,8 @@
 							</a>
 						</center>
 					</div>
-				</form>
+				</form> -->
+
 				<div class="social-media-links">
 					<a href="">
 						<img src="images/social-icons/facebook.png" alt="" onmouseover="this.src='images/social-icons/facebook-fill.png'"  onmouseout="this.src='images/social-icons/facebook.png'">

@@ -24,7 +24,7 @@ angular.module('angularWpApp')
             },
             {
                 type: "infrograph",
-                image: "views/pages/program/img/m3.jpg",
+                image: "https://s3.amazonaws.com/exosphere/program/img/m3.jpg",
                 title: '6-week program',
                 subtitle: "Lorem ipsum and more if needed",
                 text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -38,7 +38,7 @@ angular.module('angularWpApp')
             {
                 type: "parallax",
                 title: "Core curriculum",
-                image: "views/pages/program/img/m5.jpg",
+                image: "https://s3.amazonaws.com/exosphere/program/img/m5.jpg",
                 subtitle: "It's explanation anything on it",
                 text: 
                 "<p>\

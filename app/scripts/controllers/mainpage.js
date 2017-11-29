@@ -8,7 +8,7 @@
  * Controller of the angularWpApp
  */
 angular.module('angularWpApp')
-  .controller('MainpageCtrl', function () {
+  .controller('MainCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

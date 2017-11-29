@@ -393,9 +393,10 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
-            '*.html',
-            'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            '**/*.html',
+            'images/**/*',
+            'fonts/**/*',
+            'styles/fonts/**/*'
           ]
         }, {
           expand: true,
@@ -413,7 +414,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
-        src: '{,*/}*.css'
+        src: '{,**/*}*.css'
       }
     },
 
@@ -491,7 +492,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'newer:jshint',
-    'test',
     'build'
   ]);
 };

@@ -30,9 +30,12 @@
     "time-grunt": "^1.0.0"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=6.11.0"
   },
   "scripts": {
-    "test": "grunt serve"
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
   }
 }

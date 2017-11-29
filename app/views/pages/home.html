@@ -48,7 +48,7 @@
 			</div>
 			<div class="swiper-buttons">
 				<div class="container">
-					<a href="" ng-click="applynow()" class="btn btn-white">
+					<a href="" ng-click="applynow.open()" class="btn btn-white">
 						Apply now
 					</a>
 					<a href="" ng-click="learnmore()" class="btn btn-default btn-inline color-white" style="margin-left: 30px;">
@@ -92,12 +92,12 @@
 					</timer>
 					<p class="text-right" style="font-size: 14px;">
 						Buy your spot
-						<span class="color-yellow">before December 15 2017</span>
+						<span class="color-yellow">before {{endTimeString}}</span>
 						<br>
 						for the early bird benefits package
 					</p>
 				</div>
-				<a ng-click="applynow()" class="badge-button">
+				<a ng-click="applynow.open()" class="badge-button">
 					<img src="images/early-apply.png" alt="">
 				</a>
 			</div>
@@ -167,13 +167,13 @@
 								</div>
 								<div class="col-xs-12">
 									<p class="color-white">
-										Buy your spot <b class="color-yellow">before January 15 2018</b> for the early bird benefits package
+										Buy your spot <b class="color-yellow">before {{endTimeString}}</b> for the early bird benefits package
 									</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<a href="" ng-click="applynow()" class="btn btn-white xs-mt-45px xs-mb-45px">Apply now</a>
+					<a href="" ng-click="applynow.open()" class="btn btn-white xs-mt-45px xs-mb-45px">Apply now</a>
 				</div>
 			</div>
 		</div>
