@@ -19,13 +19,13 @@ phases:
       - echo `pwd`
       - bower -v
       - npm -v
+      - grunt
       - echo PRE_BUILD completed on `date`
   build:
     commands:
       - echo BUILD started on `date`
       - df -h .; du -sh -- * | sort -hr
       - echo `pwd`
-      - grunt
       - echo BUILD completed on `date`
   post_build:
     commands:      
