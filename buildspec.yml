@@ -8,6 +8,7 @@ phases:
       - echo INSTALL started on `date`
       - printenv
       - echo `pwd`
+      - npm config set unsafe-perm true
       - npm install bower -g
       - npm install grunt -g
       - npm install
