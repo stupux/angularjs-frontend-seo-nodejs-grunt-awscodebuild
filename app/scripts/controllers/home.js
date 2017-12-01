@@ -13,6 +13,8 @@ var API_URL = 'http://exosphe.re';
 angular.module('angularWpApp')
     .controller('HomeCtrl', function ( $document, $window, $scope, $sce, $rootScope, $routeParams, $route, wp, $anchorScroll, $location, $uibModal ) {
 
+        $scope.route = $route;
+
         $scope.trustSrc = function(src) {
             return $sce.trustAsResourceUrl(src);
         }

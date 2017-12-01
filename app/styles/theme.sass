@@ -160,6 +160,7 @@
 		.underline-yellow
 			box-shadow: inset 0px -5px 0px 0px $yellow-color
 			border-bottom: none !important
+			font-weight: 900
 
 	.subtitle
 		margin-top: 5px
@@ -643,3 +644,25 @@ footer
 	border: none
 	border-radius: 10px
 	margin: 0px
+
+.pills-content
+	display: flex
+	display: -webkit-flex
+	
+	& > .nav-pills
+		border-right: 3px solid $yellow-color
+		padding-right: 60px
+
+		.nav-link
+			background: transparent !important
+			color: rgba(0,0,0,.3)
+			font-size: 28px
+			padding: 0px 0px 15px
+			text-align: center
+
+		li.active .nav-link
+			color: $black-color !important
+
+	.tab-pane
+		padding-left: 15px
+
