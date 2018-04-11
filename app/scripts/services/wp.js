@@ -1,8 +1,5 @@
 'use strict';
-
-
-angular.module('angularWpApp')
-  .factory('wp', function ($q,$http) {
+angular.module('angularWpApp').factory('wp', function ($q,$http) {
 
     var API_URL = 'http://exosphe.re';
     var API_V2  = 'http://exosphe.re/wp-json';

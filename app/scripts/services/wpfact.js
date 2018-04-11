@@ -1,11 +1,9 @@
-'use strict';
-
 /**
  * @ngdoc service
  * @name angularWpApp.wpfact
  * @description
  * # wpfact
- * Factory in the angularWpApp.
+ * Factory in the angularWpApp
  */
 angular.module('angularWpApp')
   .factory('wpfact', function() {
@@ -20,4 +18,4 @@ angular.module('angularWpApp')
             return meaningOfLife;
         }
     };
-  });
+});

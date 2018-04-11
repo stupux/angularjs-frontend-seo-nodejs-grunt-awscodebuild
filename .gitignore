@@ -1,4 +1,7 @@
 node_modules/
+.tmp/
+.sass-cache/
+.tmp/*
 public
 bower_components/
 bower_components
