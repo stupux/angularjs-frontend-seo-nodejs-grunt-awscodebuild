@@ -32,6 +32,10 @@ npm start
 - browser live reloading
 - aws codebuild ```buildspec.yml```
 
+### Use it with AWS Elasticbeanstalk
+- npm optimization with node_modules cache for deployment
+- nginx config file
+
 
 #### Development
 
